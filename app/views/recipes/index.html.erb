@@ -14,8 +14,8 @@
   </tr>
   <% @recipes.each do |recipe| %>
     <tr class=<%= cycle("even", "odd") %>>
-      <td><%=	 link_to(image_tag(["image_url"], height: 100, width: 100)) %></td>
-      <td><%=	 link_to(sanitize(["title"])) %></td>
+      <td><%=	 link_to(image_tag(recipe["image_url"], height: 100, width: 100)) %></td>
+      <td><%=	 link_to(sanitize(recipe["title"])) %></td>
       <td><%= recipe["social_rank"] %></td>
     </tr>
   <% end %>
